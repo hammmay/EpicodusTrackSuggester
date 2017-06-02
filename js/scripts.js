@@ -22,6 +22,19 @@ $(document).ready(function() {
     if (question5 === "yes" && question1 === "yes") {
       tracks = ("It's normal to be nervous, especially if you have no experience in programing. But don't worry! The instructors at Epicodus are here to answer your questions about the different options and why they might be a good fit.");
     }
+    if (question1 === "yes" && question2 === "yes" && question3 === "yes" && question4 === "yes") {
+      tracks = ("You like a little bit of everything, which is great, and any of the tracks may work for you.");
+    }
+    if (question1 === "yes" && question2 === "yes" && question3 === "yes") {
+      tracks = ("Great news! You may be a good fit for a couple of choices: the C# track which is a great path to Microsoft, or the CSS Design track which will produce beautiful webpages");
+    }
+    if (question1 === "yes" && question2 === "yes" && question4 === "yes") {
+      tracks = ("Great news! You may be a good fit for a couple of choices: the C# track which is a great path to Microsoft, or the Java and Andoid track which will give you the basics as well as an app to build");
+    }
+    if (question1 === "yes" && question3 === "yes" && question4 === "yes") {
+      tracks = ("Great news! You may be a good fit for a couple of choices: the CSS Design track which will produce beautiful webpages, or the Java and Andoid track which will give you the basics as well as an app to build");
+    }
+
 
     $("#options").empty().append(tracks);
     $("#tracks").show();
