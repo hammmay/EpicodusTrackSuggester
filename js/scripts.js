@@ -1,12 +1,13 @@
-$(function() {
+$(document).ready(function() {
+  $("form#insurance").submit(function(event) {
+    var age = parseInt($("input#age").val());
+    var gender = $("select#gender").val();
 
-  $("button#submit").click(function() {
-      $("ul").prepend("<li>"You hit the submit button"</li>");
+    var quote = (100 - age) * 3;
 
+    $("#rate").empty().append(quote);
+    $("#quote").show();
 
-
-)};
-
-
-
-var question1 = $("input:radio[name=question1]:checked").val();
+    event.preventDefault();
+  });
+});
